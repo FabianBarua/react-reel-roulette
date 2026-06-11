@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* class-based dark mode (toggle .dark on <html>), falls back to system if unused */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Material Design 3 — green palette */
+:root {
+  --md-primary: #2e6f40;
+  --md-on-primary: #ffffff;
+  --md-primary-container: #b6f2c5;
+  --md-on-primary-container: #0c5220;
+  --md-secondary-container: #d8e8d4;
+  --md-on-secondary-container: #1a3318;
+  --md-tertiary-container: #c8e6c9;
+  --md-on-tertiary-container: #1b3a1f;
+  --md-surface: #f7fbf8;
+  --md-on-surface: #191d19;
+  --md-on-surface-variant: #414941;
+  --md-surface-container-lowest: #ffffff;
+  --md-surface-container-low: #f0f5ef;
+  --md-surface-container: #eaf0e8;
+  --md-surface-container-high: #e4ebe2;
+  --md-outline: #717971;
+  --md-outline-variant: #c1c9bf;
+}
+
+.dark {
+  --md-primary: #95d5a6;
+  --md-on-primary: #00391c;
+  --md-primary-container: #15522d;
+  --md-on-primary-container: #b6f2c5;
+  --md-secondary-container: #3a4a38;
+  --md-on-secondary-container: #d8e8d4;
+  --md-tertiary-container: #2d4a32;
+  --md-on-tertiary-container: #c8e6c9;
+  --md-surface: #101410;
+  --md-on-surface: #e2e3de;
+  --md-on-surface-variant: #c1c9bf;
+  --md-surface-container-lowest: #0b0f0b;
+  --md-surface-container-low: #171d17;
+  --md-surface-container: #1b211b;
+  --md-surface-container-high: #252b25;
+  --md-outline: #8b938a;
+  --md-outline-variant: #414941;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Google Sans', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@keyframes win-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-win-rise {
+  animation: win-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes hue-drift {
+  0%,
+  100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(40deg);
+  }
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-hue-drift {
+  animation: hue-drift 12s ease-in-out infinite;
+}
+
+.animate-float-y {
+  animation: float-y 5s ease-in-out infinite;
+}
+
+.text-gradient-spin {
+  background: linear-gradient(100deg, #2e6f40, #4caf50 45%, #81c784 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

@@ -1,0 +1,75 @@
+{
+  "name": "react-reel-roulette",
+  "version": "0.1.0",
+  "description": "Horizontal reel roulette for React + Tailwind CSS. Headless hook + customizable component, dark/light ready.",
+  "license": "MIT",
+  "author": "Fabian Barua",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FabianBarua/react-reel-spinner.git"
+  },
+  "homepage": "https://github.com/FabianBarua/react-reel-spinner#readme",
+  "bugs": {
+    "url": "https://github.com/FabianBarua/react-reel-spinner/issues"
+  },
+  "type": "module",
+  "keywords": [
+    "react",
+    "roulette",
+    "reel-roulette",
+    "prize-reveal",
+    "reel",
+    "spinner",
+    "tailwind",
+    "prize-wheel"
+  ],
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:lib": "vite build --config vite.lib.config.ts && tsc -p tsconfig.lib.json",
+    "prepublishOnly": "pnpm build:lib",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@eslint/js": "^10.0.1",
+    "@rolldown/plugin-babel": "^0.2.3",
+    "@tailwindcss/vite": "^4.3.0",
+    "@types/babel__core": "^7.20.5",
+    "@types/node": "^24.12.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "eslint": "^10.3.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.6.0",
+    "tailwindcss": "^4.3.0",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.59.2",
+    "vite": "^8.0.12"
+  }
+}
