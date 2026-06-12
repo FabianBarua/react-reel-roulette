@@ -16,7 +16,10 @@ import { translations, type Lang } from './i18n'
 
 /* ---------------------------------- data --------------------------------- */
 
-const ITEM_IMAGES = Array.from({ length: 8 }, (_, i) => `/skins/skin${i + 1}.webp`)
+const ITEM_IMAGES = Array.from(
+  { length: 8 },
+  (_, i) => `${import.meta.env.BASE_URL}skins/skin${i + 1}.webp`,
+)
 
 const DEFAULT_ITEMS: RouletteItem[] = [
   { id: 'dune', name: 'Dune Fragment', subtitle: 'Common', image: ITEM_IMAGES[0], color: '#b0c3d9', weight: 60 },
@@ -352,7 +355,7 @@ function App() {
             <LangSwitcher lang={lang} onChange={setLang} />
             <ThemeToggle dark={dark} onToggle={() => setDark((d) => !d)} />
             <a
-              href="https://github.com/FabianBarua/react-reel-spinner"
+              href="https://github.com/FabianBarua/react-reel-roulette"
               target="_blank"
               rel="noreferrer"
               className="hidden items-center gap-1.5 rounded-full bg-(--md-secondary-container) px-4 py-2 text-[13px] font-medium text-(--md-on-secondary-container) transition hover:brightness-105 active:scale-[0.98] sm:inline-flex"
@@ -377,7 +380,7 @@ function App() {
             </a>
           ))}
           <a
-            href="https://github.com/FabianBarua/react-reel-spinner"
+            href="https://github.com/FabianBarua/react-reel-roulette"
             target="_blank"
             rel="noreferrer"
             className="flex-1 rounded-full py-2 text-center text-[12.5px] font-medium text-(--md-on-surface-variant) transition hover:bg-(--md-surface-container-high)"
@@ -395,7 +398,7 @@ function App() {
           <div className="pointer-events-none absolute -bottom-24 -right-12 h-72 w-72 rounded-full bg-(--md-on-primary-container)/[0.06]" />
 
           <a
-            href="https://github.com/FabianBarua/react-reel-spinner"
+            href="https://github.com/FabianBarua/react-reel-roulette"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-(--md-on-primary-container)/20 px-3.5 py-1.5 text-[12px] font-medium transition hover:bg-(--md-on-primary-container)/10"
@@ -777,7 +780,7 @@ return (
       <footer className="py-10 text-center text-[12.5px] text-(--md-on-surface-variant)">
         react-reel-roulette · MIT ·{' '}
         <a
-          href="https://github.com/FabianBarua/react-reel-spinner"
+          href="https://github.com/FabianBarua/react-reel-roulette"
           target="_blank"
           rel="noreferrer"
           className="text-(--md-primary) transition hover:underline"

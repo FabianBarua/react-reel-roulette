@@ -6,11 +6,11 @@
   "author": "Fabian Barua",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FabianBarua/react-reel-spinner.git"
+    "url": "git+https://github.com/FabianBarua/react-reel-roulette.git"
   },
-  "homepage": "https://github.com/FabianBarua/react-reel-spinner#readme",
+  "homepage": "https://fabianbarua.github.io/react-reel-roulette/",
   "bugs": {
-    "url": "https://github.com/FabianBarua/react-reel-spinner/issues"
+    "url": "https://github.com/FabianBarua/react-reel-roulette/issues"
   },
   "type": "module",
   "keywords": [
@@ -19,7 +19,6 @@
     "reel-roulette",
     "prize-reveal",
     "reel",
-    "spinner",
     "tailwind",
     "prize-wheel"
   ],
@@ -48,11 +47,9 @@
     "react": ">=18",
     "react-dom": ">=18"
   },
-  "dependencies": {
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6"
-  },
   "devDependencies": {
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
     "@babel/core": "^7.29.0",
     "@eslint/js": "^10.0.1",
     "@rolldown/plugin-babel": "^0.2.3",
