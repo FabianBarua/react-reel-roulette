@@ -772,8 +772,7 @@ return (
           <p className="mb-4 max-w-2xl text-[13.5px] leading-relaxed text-(--md-on-surface-variant)">
             {t.api.tailwindBody}
           </p>
-          <Code copyLabel={t.code.copy} copiedLabel={t.code.copied}>{`@import "tailwindcss";
-@source "../node_modules/react-reel-roulette";`}</Code>
+          <Code copyLabel={t.code.copy} copiedLabel={t.code.copied}>{`import 'react-reel-roulette/styles.css'`}</Code>
         </Section>
       </div>
 

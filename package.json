@@ -1,6 +1,6 @@
 {
   "name": "react-reel-roulette",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Horizontal reel roulette for React + Tailwind CSS. Headless hook + customizable component, dark/light ready.",
   "license": "MIT",
   "author": "Fabian Barua",
@@ -25,7 +25,9 @@
   "files": [
     "dist"
   ],
-  "sideEffects": false,
+  "sideEffects": [
+    "**/*.css"
+  ],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -33,12 +35,13 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
-    }
+    },
+    "./styles.css": "./dist/styles.css"
   },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:lib": "vite build --config vite.lib.config.ts && tsc -p tsconfig.lib.json",
+    "build:lib": "vite build --config vite.lib.config.ts && tailwindcss -i src/lib/styles.css -o dist/styles.css --minify && tsc -p tsconfig.lib.json",
     "prepublishOnly": "pnpm build:lib",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -48,11 +51,10 @@
     "react-dom": ">=18"
   },
   "devDependencies": {
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6",
     "@babel/core": "^7.29.0",
     "@eslint/js": "^10.0.1",
     "@rolldown/plugin-babel": "^0.2.3",
+    "@tailwindcss/cli": "^4.3.0",
     "@tailwindcss/vite": "^4.3.0",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^24.12.3",
@@ -64,6 +66,8 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
     "tailwindcss": "^4.3.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.2",

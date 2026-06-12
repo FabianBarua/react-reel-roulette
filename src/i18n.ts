@@ -110,8 +110,9 @@ export const translations = {
       headlessBody3: ' container and ',
       headlessBody4:
         ' to the cell strip: the hook measures the real DOM, so any size or spacing works.',
-      tailwindTitle: 'Tailwind',
-      tailwindBody: 'Styles are Tailwind classes. Add the package to the scan in your CSS:',
+      tailwindTitle: 'Styles',
+      tailwindBody:
+        'Precompiled CSS ships with the package and is auto-imported — no Tailwind setup needed. If your bundler strips CSS imports, import it manually:',
       spinComments: {
         random: '// client-side random (cosmetic, by weight)',
         backend: '// winner decided by your backend — two equivalent forms',
@@ -229,8 +230,9 @@ export const translations = {
       headlessBody3: ' y ',
       headlessBody4:
         ' a la tira de celdas: el hook mide el DOM real, así que cualquier tamaño o spacing funciona.',
-      tailwindTitle: 'Tailwind',
-      tailwindBody: 'Los estilos son clases de Tailwind. Agregá el paquete al escaneo en tu CSS:',
+      tailwindTitle: 'Estilos',
+      tailwindBody:
+        'El paquete trae CSS precompilado y se auto-importa — no necesitás configurar Tailwind. Si tu bundler elimina imports de CSS, importalo manualmente:',
       spinComments: {
         random: '// aleatorio client-side (cosmético, según weight)',
         backend: '// ganador decidido por tu backend — dos formas equivalentes',

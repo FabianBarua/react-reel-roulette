@@ -1,0 +1,10 @@
+/*
+ * Precompiled styles for react-reel-roulette.
+ * Generated at build time by scanning src/lib with Tailwind 4.
+ * Theme + utilities only — no preflight, so it won't reset consumer styles.
+ */
+@layer theme, utilities;
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/utilities" layer(utilities) source(none);
+@source "./";
+@custom-variant dark (&:where(.dark, .dark *));

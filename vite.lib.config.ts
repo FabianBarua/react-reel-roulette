@@ -15,7 +15,9 @@ export default defineConfig({
       fileName: () => 'index.js',
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'react/jsx-runtime'],
+      // CSS kept external so `import './styles.css'` survives in dist/index.js;
+      // the actual file is compiled separately with the Tailwind CLI.
+      external: ['react', 'react-dom', 'react/jsx-runtime', './styles.css'],
     },
   },
 })

@@ -1,3 +1,5 @@
+import './styles.css'
+
 export { ReelRoulette } from './ReelRoulette'
 export type {
   ReelRouletteProps,

@@ -12,21 +12,23 @@ npm i react-reel-roulette
 pnpm add react-reel-roulette
 ```
 
-**Peer dependencies:** React 18+ and Tailwind CSS 4 (the component ships Tailwind class names; your build must scan them).
+**Peer dependencies:** React 18+. Styles are precompiled and bundled — no Tailwind setup required in your app.
 
-### Tailwind CSS 4
+### Styles
 
-Add the package to your CSS scan path so utility classes are generated:
+The package auto-imports its own precompiled CSS (`dist/styles.css`), so the component works out of the box with any bundler that handles CSS imports (Vite, Next.js, webpack, etc.).
+
+If your setup strips CSS imports from `node_modules`, import it manually:
+
+```ts
+import 'react-reel-roulette/styles.css'
+```
+
+If you use Tailwind 4 and prefer generating the utilities yourself (e.g. to dedupe with your own CSS), you can instead add the package to your scan path:
 
 ```css
 @import "tailwindcss";
 @source "../node_modules/react-reel-roulette";
-```
-
-If you toggle dark mode with a class on `<html>`, add:
-
-```css
-@custom-variant dark (&:where(.dark, .dark *));
 ```
 
 ## Quick start
